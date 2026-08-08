@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pikmin Bloom | Pikmin</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="icon" type="image/png" href="IMAGENES/ICONOO.png">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <header>
+            <img src="IMAGENES/BANNERUP.png" class="banner" alt="Banner superior">
+        </header>
+
+        <h1>BLOOM</h1>
+
+        <nav>
+            <a href="index.html">INICIO</a>
+            <a href="informacion.html">INFORMACION</a>
+            <a href="premios.html">PREMIOS</a>
+            <a href="bloom.html" style="background:#18b81c; color:white;">BLOOM</a>
+        </nav>
+
+        <section class="contenido">
+            
+            <img src="IMAGENES/BLOOMPIK.png" class="imagen-info" alt="Pikmin Bloom">
+
+            <p style="margin-bottom: 20px;">
+                Es un juego móvil gratuito de realidad aumentada desarrollado por Niantic en colaboración con Nintendo, diseñado para premiar la actividad física al aire libre. El objetivo principal es caminar para cultivar criaturas virtuales llamadas Pikmin, plantar flores en el mapa y registrar los paseos diarios. (Si lo ves de una forma, es como pokemon go pero de pikmin!)
+            </p>
+
+            <p style="margin-bottom: 30px;">
+                La temática es diferente a todos los juegos de pikmin existentes, este juego se maneja por pikmins de decoracion, eventos por tiempo y "enviar a sus pikmins a recolectar o luchar por su cuenta" a los que puedes alimentar con néctar para aumentar su amistad y tener mas fuerza para recolectar objetos.
+            </p>
+
+            <img src="IMAGENES/decor.png" class="imagen-info" alt="Pikmin de Decoración">
+
+            <p style="margin-bottom: 20px;">
+                Pikmin Bloom realiza principalmente eventos mensuales temáticos, días de la comunidad de fin de semana y tours presenciales o especiales. Estos eventos ofrecen la oportunidad de conseguir Pikmin disfrazados únicos, completar misiones y ganar recompensas especiales.
+            </p>
+
+            <p style="font-weight: bold; margin-bottom: 10px;">Tipos de Eventos Principales</p>
+            <ul style="margin-left: 20px; margin-bottom: 30px; line-height: 1.6;">
+                <li style="margin-bottom: 10px;"><strong>Eventos Mensuales:</strong> Duran todo el mes con temáticas variadas, durante este tiempo puedes conseguir pikmins con accesorios de la temática, por ejemplo temática de navidad en diciembre, etc...</li>
+                <li style="margin-bottom: 10px;"><strong>Días de la Comunidad:</strong> Se celebran un fin de semana al mes (por ejemplo, el 8 y 9 de agosto de 2026). Los jugadores caminan grandes distancias, plantan flores para conseguir una insignia especial en el perfil y obtienen néctar especial.</li>
+                <li style="margin-bottom: 15px;"><strong>Tours y Eventos Presenciales:</strong> Caminatas temáticas o colaboraciones en ubicaciones físicas específicas que otorgan postales de misión, insignias y objetos de colección.</li>
+            </ul>
+
+            <h2>TEMATICAS</h2>
+
+            <p style="margin-bottom: 30px; text-align: justify;">
+                Estas temáticas mensuales se actualizan cada mes precisamente, a pesar de que se pueden repetir, no seran los mismos accesorios, a continuacion algunas tematicas de estos meses:
+            </p>
+
+            <div class="carrusel">
+                <button onclick="moverSlider(-1)">&#10094;</button>
+                <div class="contenedor-carrusel">
+                    <div class="slider" id="slider">
+                        <img src="IMAGENES/carne.png" alt="Temática 1">
+                        <img src="IMAGENES/CHOCOLATE.png" alt="Temática 2">
+                        <img src="IMAGENES/granizado.png" alt="Temática 3">
+                        <img src="IMAGENES/ZELDA.png" alt="Temática 1">
+                        <img src="IMAGENES/madera.png" alt="Temática 2">
+                        <img src="IMAGENES/HALLOWEEN.png" alt="Temática 3">
+                        <img src="IMAGENES/MOON.png" alt="Temática 1">
+                        <img src="IMAGENES/navidad.png" alt="Temática 2">
+                        <img src="IMAGENES/pancito.png" alt="Temática 3">
+                        <img src="IMAGENES/VIOLIN.png" alt="Temática 3">
+                    </div>
+                </div>
+                <button onclick="moverSlider(1)">&#10095;</button>
+            </div>
+
+        </section>
+
+        <footer>
+            <img src="IMAGENES/BANNERDOWN.png" class="banner" alt="Banner inferior">
+        </footer>
+
+    </div>
+
+    <script>
+        const slider = document.getElementById("slider");
+        let index = 0;
+
+        function moverSlider(direccion) {
+            const totalImágenes = slider.children.length;
+            index = (index + direccion + totalImágenes) % totalImágenes;
+            slider.style.transform = `translateX(-${index * 100}%)`;
+        }
+    </script>
+
+
+
+
+</body>
+</html>
